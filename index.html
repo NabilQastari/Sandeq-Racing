@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeq Boat Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    
+    <div class="ui-overlay">
+        <!-- Menu Screen -->
+        <div id="menuScreen">
+            <h1>SANDEQ BOAT RACING</h1>
+            <div class="buttons-row">
+                <button id="startBtn" class="btn">START</button>
+                <button id="creditsBtn" class="btn">CREDITS</button>
+            </div>
+            
+            <div class="menu-instructions">
+                <h3>HOW TO PLAY</h3>
+                <p class="desktop-instruction">• Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to steer</p>
+                <p class="mobile-instruction">• Use <strong>Joystick</strong> to steer</p>
+                <p>• Avoid Obstacles and Islands</p>
+                <p>• Race against 5 other boats to the finish line!</p>
+            </div>
+        </div>
+        
+        <!-- Credits Screen -->
+        <div id="creditsScreen" class="hidden">
+            <h2>ABOUT SANDEQ</h2>
+            <div class="credits-content">
+                <div class="section">
+                    <h3>CULTURE</h3>
+                    <p>This game is inspired by the <strong>Sandeq</strong>, a traditional sailing vessel from the Mandar culture of West Sulawesi, Indonesia. Recognized as one of the fastest traditional boats in the Austronesian archipelago, the Sandeq is a symbol of maritime heritage and seamanship.</p>                    
+                </div>
+                
+
+                
+                <div class="section">
+                    <h3>CREDITS</h3>
+                    <p><strong>Developed by:</strong></p>
+                    <p>KELOMPOK 4 GRAFIKA</p>
+                    <p>Yazid Al-Ghiefary</p>
+                    <p>Nabil Qastari</p>
+                    <p>Indana Fayza</p>
+                    <br>
+                    <p>Fun Fact: every assets in this game is from ai generated👍</p>            
+                </div>
+            </div>
+            <button id="creditsBackBtn" class="btn">BACK TO MENU</button>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div id="timer">Time: 00:00.00</div>
+            <div id="position">Position: 1st</div>
+        </div>
+        
+        <!-- Off-screen Indicators Container -->
+        <div id="indicators"></div>
+
+        <!-- Pause Button -->
+        <button id="pauseBtn">PAUSE</button>
+
+        <!-- Countdown -->
+        <div id="countdown">3</div>
+
+        <!-- Pause Menu -->
+        <div id="pauseMenu">
+            <h2>PAUSED</h2>
+            <div class="buttons">
+                <button id="resumeBtn" class="btn">RESUME</button>
+                <button id="pauseMenuBtn" class="btn">MENU</button>
+            </div>
+        </div>
+
+        <!-- Finish Screen -->
+        <div id="finishScreen">
+            <h2>RACE COMPLETE!</h2>
+            <div class="results">
+                <div id="finalTime">Time: 00:00.00</div>
+                <div id="finalPosition">Position: 1st</div>
+            </div>
+            <div class="buttons">
+                <button id="restartBtn" class="btn">RESTART</button>
+                <button id="menuBtn" class="btn">MENU</button>
+            </div>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div id="mobileControls" class="hidden">
+            <div id="joystickZone">
+                <div id="joystickKnob"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
